@@ -1,12 +1,15 @@
+import eliteslaHeroImg from '../assets/elitesla.jpg';
+
 /**
- * Hero section — full-screen dark hero with headline, supporting text,
- * two CTAs, and a professional industrial image from Unsplash.
+ * Hero section — full-screen hero with company name headline,
+ * supporting description, two CTAs, registration reference,
+ * and the profile-cover artwork.
  */
 export default function Hero() {
     return (
         <section
             id="hero"
-            className="relative min-h-screen flex items-center bg-navy overflow-hidden pt-16"
+            className="relative min-h-screen flex items-center bg-navy overflow-hidden pt-20 md:pt-24 pb-16"
             aria-label="Hero"
         >
             {/* Subtle grid overlay */}
@@ -26,33 +29,31 @@ export default function Hero() {
                 style={{ background: 'radial-gradient(circle, #FFFFFF 0%, transparent 70%)' }}
             />
 
-            <div className="relative z-10 max-w-site mx-auto px-6 md:px-10 py-20 w-full">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div className="relative z-10 max-w-site mx-auto px-6 md:px-10 py-12 md:py-16 w-full">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
 
-                    {/* ── Left: Text content ── */}
+                    {/* ── Left: Text content (prominent H1 hierarchy) ── */}
                     <div
-                        className="flex flex-col gap-6"
+                        className="lg:col-span-7 flex flex-col gap-6"
                         style={{ animation: 'fadeUpIn 0.7s ease both', animationDelay: '0ms' }}
                     >
-                        {/* Badge */}
+                        {/* Eyebrow text */}
                         <div className="inline-flex items-center gap-2 self-start px-3 py-1.5 rounded border border-white/20 bg-white/5">
                             <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse-dot" aria-hidden="true" />
-                            <span className="font-sans text-label-sm uppercase tracking-[0.15em] text-white">
-                                IRDAI Licensed · Reg. IRDA/CORP/SLA-200067
+                            <span className="font-sans text-xs md:text-label-sm uppercase tracking-[0.15em] text-text-secondary font-semibold">
+                                INSURANCE SURVEYING &amp; LOSS ASSESSMENT
                             </span>
                         </div>
 
-                        {/* Headline */}
-                        <h1 className="font-display text-display-xl text-white leading-[1.08] tracking-tight">
-                            Expert Insurance Survey &amp;{' '}
-                            <span className="text-white underline decoration-white/30 underline-offset-8">Loss Assessment</span>
+                        {/* Main heading (H1) — Prominent, bold, 44-52px on desktop with balanced wrapping */}
+                        <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-[48px] xl:text-[52px] font-extrabold text-white leading-[1.12] tracking-tight">
+                            Elite Insurance Surveyors &amp; <br className="hidden sm:inline" />
+                            Loss Assessors
                         </h1>
 
-                        {/* Supporting text */}
-                        <p className="font-sans text-body-lg text-gray-400 max-w-xl leading-relaxed">
-                            Elite SLA delivers precise, impartial, and swift insurance survey and
-                            loss assessment services — helping insurers and policyholders reach
-                            fair, amicable settlements with speed and accuracy.
+                        {/* Supporting description */}
+                        <p className="font-sans text-base sm:text-lg text-text-secondary max-w-xl leading-relaxed">
+                            Professional insurance surveying and loss assessment across fire, engineering, marine cargo, miscellaneous and loss of profit claims, with a focus on objective assessment, clear reporting and timely service.
                         </p>
 
                         {/* CTAs */}
@@ -61,7 +62,7 @@ export default function Hero() {
                                 href="#expertise"
                                 className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-white hover:bg-gray-400 text-black font-sans text-body-md font-semibold rounded transition-colors duration-150 shadow-md"
                             >
-                                Explore Services
+                                Explore Our Services
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                                     <polyline points="9 18 15 12 9 6"/>
                                 </svg>
@@ -74,59 +75,36 @@ export default function Hero() {
                             </a>
                         </div>
 
-                        {/* Trust indicators */}
-                        <div className="flex flex-wrap gap-x-6 gap-y-2 pt-2 border-t border-white/10">
-                            {[
-                                '25+ Years Combined Experience',
-                                '5 Lines of Business',
-                                'Pan-India Coverage',
-                            ].map((item) => (
-                                <div key={item} className="flex items-center gap-1.5">
-                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                                        <polyline points="20 6 9 17 4 12"/>
-                                    </svg>
-                                    <span className="font-sans text-body-sm text-gray-400">{item}</span>
-                                </div>
-                            ))}
+                        {/* Registration reference (secondary trust detail) */}
+                        <div className="flex items-center gap-2 pt-2 border-t border-white/10 text-text-secondary">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className="shrink-0">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            </svg>
+                            <span className="font-sans text-xs sm:text-body-sm text-text-secondary">
+                                Registration Reference: IRDA/CORP/SLA-200067
+                            </span>
                         </div>
                     </div>
 
-                    {/* ── Right: Image ── */}
+                    {/* ── Right: Image (balanced proportions, object-contain, desktop right) ── */}
                     <div
-                        className="relative"
+                        className="lg:col-span-5 relative flex items-center justify-center"
                         style={{ animation: 'fadeUpIn 0.7s ease both', animationDelay: '150ms' }}
                     >
-                        <div className="relative rounded-lg overflow-hidden shadow-lg border border-white/10">
+                        <div className="w-full max-w-lg lg:max-w-none relative rounded-lg overflow-hidden shadow-lg border border-border-subtle bg-bg-card/40 flex items-center justify-center p-2 sm:p-3">
                             <img
-                                src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=900&q=80&auto=format&fit=crop"
-                                alt="Industrial inspection — insurance surveyor assessing structural damage"
-                                className="w-full h-[480px] object-cover filter grayscale contrast-125 brightness-90"
+                                src={eliteslaHeroImg}
+                                alt="Elite Insurance Surveyors & Loss Assessors artwork"
+                                className="w-full h-auto max-h-[380px] sm:max-h-[440px] lg:max-h-[460px] object-contain rounded"
                                 loading="eager"
-                                width="900"
-                                height="480"
                             />
-                            {/* Overlay gradient */}
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" aria-hidden="true" />
-                        </div>
-
-                        {/* Floating label card */}
-                        <div className="absolute -bottom-4 -left-4 bg-navy-800 border border-navy-600 shadow-md rounded px-4 py-3 flex items-center gap-3">
-                            <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center shrink-0">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <div className="font-sans text-label-sm uppercase tracking-widest text-gray-600 dark:text-gray-400">IRDAI Licensed</div>
-                                <div className="font-sans text-body-sm font-semibold text-navy dark:text-white">Independent Surveyors</div>
-                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
             {/* Scroll cue */}
-            <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/30 animate-bounce" aria-hidden="true">
+            <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/30 animate-bounce" aria-hidden="true">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                     <polyline points="6 9 12 15 18 9"/>
                 </svg>

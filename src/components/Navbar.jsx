@@ -20,7 +20,6 @@ export default function Navbar({ dark, toggleTheme }) {
     const navLinks = [
         { label: 'About',    href: '#about' },
         { label: 'Services', href: '#expertise' },
-        { label: 'Expertise',href: '#expertise' },
         { label: 'Team',     href: '#team' },
         { label: 'Presence', href: '#presence' },
         { label: 'Contact',  href: '#contact' },
