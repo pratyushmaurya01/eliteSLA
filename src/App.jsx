@@ -3,7 +3,6 @@ import { useTheme, useScrollReveal } from './hooks';
 import IntroAnimation from './components/IntroAnimation';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import CredibilityStrip from './components/CredibilityStrip';
 import About from './components/About';
 import Expertise from './components/Expertise';
 import ExperienceTimeline from './components/ExperienceTimeline';
@@ -47,10 +46,7 @@ export default function App() {
                 {/* 1. Hero */}
                 <Hero />
 
-                {/* 2. Credibility strip */}
-                <CredibilityStrip />
-
-                {/* 3. About */}
+                {/* 2. About */}
                 <About />
 
                 {/* 4. Our Expertise */}

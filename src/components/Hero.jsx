@@ -37,18 +37,10 @@ export default function Hero() {
                         className="lg:col-span-7 flex flex-col gap-6"
                         style={{ animation: 'fadeUpIn 0.7s ease both', animationDelay: '0ms' }}
                     >
-                        {/* Eyebrow text */}
-                        <div className="inline-flex items-center gap-2 self-start px-3 py-1.5 rounded border border-white/20 bg-white/5">
-                            <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse-dot" aria-hidden="true" />
-                            <span className="font-sans text-xs md:text-label-sm uppercase tracking-[0.15em] text-text-secondary font-semibold">
-                                INSURANCE SURVEYING &amp; LOSS ASSESSMENT
-                            </span>
-                        </div>
-
                         {/* Main heading (H1) — Prominent, bold, 44-52px on desktop with balanced wrapping */}
                         <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-[48px] xl:text-[52px] font-extrabold text-white leading-[1.12] tracking-tight">
-                            Elite Insurance Surveyors &amp; <br className="hidden sm:inline" />
-                            Loss Assessors
+                            Elite Insurance <br className="hidden sm:inline" />
+                            Surveyors &amp; Loss Assessors
                         </h1>
 
                         {/* Supporting description */}
@@ -59,8 +51,8 @@ export default function Hero() {
                         {/* CTAs */}
                         <div className="flex flex-col sm:flex-row gap-3 pt-2">
                             <a
-                                href="#expertise"
-                                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-white hover:bg-gray-400 text-black font-sans text-body-md font-semibold rounded transition-colors duration-150 shadow-md"
+                                 href="#expertise"
+                                 className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-white hover:bg-gray-400 text-black font-sans text-body-md font-semibold rounded transition-colors duration-150 shadow-md"
                             >
                                 Explore Our Services
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -68,20 +60,20 @@ export default function Hero() {
                                 </svg>
                             </a>
                             <a
-                                href="#contact"
-                                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 border border-white/30 hover:border-white text-white font-sans text-body-md font-medium rounded transition-colors duration-150"
+                                 href="#contact"
+                                 className="inline-flex items-center justify-center gap-2 px-6 py-3.5 border border-white/30 hover:border-white text-white font-sans text-body-md font-medium rounded transition-colors duration-150"
                             >
                                 Contact Us
                             </a>
                         </div>
 
                         {/* Registration reference (secondary trust detail) */}
-                        <div className="flex items-center gap-2 pt-2 border-t border-white/10 text-text-secondary">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className="shrink-0">
+                        <div className="flex items-center gap-2.5 pt-3 border-t border-white/20 text-white/90">
+                            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className="shrink-0 text-white/80">
                                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
                             </svg>
-                            <span className="font-sans text-xs sm:text-body-sm text-text-secondary">
-                                Registration Reference: IRDA/CORP/SLA-200067
+                            <span className="font-sans text-xs sm:text-body-sm text-white/85 font-medium tracking-wide">
+                                Registration Reference: <span className="text-white font-semibold">IRDA/CORP/SLA-200067</span>
                             </span>
                         </div>
                     </div>

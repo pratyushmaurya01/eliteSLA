@@ -20,68 +20,87 @@
 
 :root {
     /* Semantic Color Tokens (Default / Dark Mode) */
-    --bg-primary:      #000000;
-    --bg-secondary:    #1C1C1C;
-    --bg-card:         #242424;
-    --bg-elevated:     #2D2D2D;
+    --bg-primary:          #000000;
+    --bg-secondary:        #1C1C1C;
+    --bg-card:             #252527;
+    --bg-elevated:         #2D2D2D;
+    --bg-services:         #19191B;
 
-    --text-primary:    #FFFFFF;
-    --text-secondary:  #D0D1D1;
-    --text-muted:      #8E8F90;
+    --text-primary:        #FFFFFF;
+    --text-secondary:      #D0D1D1;
+    --text-muted:          #A2A2A5;
 
-    --border-subtle:   #333333;
-    --border-strong:   #4A4A4A;
+    --border-subtle:       #38383B;
+    --border-strong:       #4A4A4A;
 
-    --accent-primary:  #FFFFFF;
-    --accent-hover:    #D0D1D1;
-    --accent-subtle:   #333333;
-    --accent-contrast: #000000;
+    /* Accents */
+    --accent-primary:      #80648F;
+    --accent-hover:        #9B7EAA;
+    --accent-subtle:       rgba(128, 100, 143, 0.15);
+    --accent-contrast:     #FFFFFF;
 
-    --focus-ring:      #FFFFFF;
+    --accent-violet:       #80648F;
+    --accent-rust:         #A6533A;
+    --accent-sage:         #477563;
+    --accent-ochre:        #A98025;
+
+    --focus-ring:          #80648F;
 }
 
 /* Light Mode Overrides (High-contrast editorial inverted palette) */
 html:not(.dark) {
-    --bg-primary:      #FFFFFF;
-    --bg-secondary:    #F5F5F7;
-    --bg-card:         #FFFFFF;
-    --bg-elevated:     #EDEDF0;
+    --bg-primary:          #FFFFFF;
+    --bg-secondary:        #F5F5F7;
+    --bg-card:             #FFFFFF;
+    --bg-elevated:         #EDEDF0;
+    --bg-services:         #F5F5F7;
 
-    --text-primary:    #000000;
-    --text-secondary:  #555555;
-    --text-muted:      #777777;
+    --text-primary:        #000000;
+    --text-secondary:      #555555;
+    --text-muted:          #777777;
 
-    --border-subtle:   #E2E2E6;
-    --border-strong:   #C8C8CC;
+    --border-subtle:       #E2E2E6;
+    --border-strong:       #C8C8CC;
 
-    --accent-primary:  #000000;
-    --accent-hover:    #333333;
-    --accent-subtle:   #EFEFEF;
-    --accent-contrast: #FFFFFF;
+    --accent-primary:      #6A4E7A;
+    --accent-hover:        #553A64;
+    --accent-subtle:       rgba(106, 78, 122, 0.1);
+    --accent-contrast:     #FFFFFF;
 
-    --focus-ring:      #000000;
+    --accent-violet:       #6A4E7A;
+    --accent-rust:         #91452F;
+    --accent-sage:         #386252;
+    --accent-ochre:        #926D1E;
+
+    --focus-ring:          #6A4E7A;
 }
 
 /* Explicit Dark Mode Enforcement */
 html.dark {
-    --bg-primary:      #000000;
-    --bg-secondary:    #1C1C1C;
-    --bg-card:         #242424;
-    --bg-elevated:     #2D2D2D;
+    --bg-primary:          #000000;
+    --bg-secondary:        #1C1C1C;
+    --bg-card:             #252527;
+    --bg-elevated:         #2D2D2D;
+    --bg-services:         #19191B;
 
-    --text-primary:    #FFFFFF;
-    --text-secondary:  #D0D1D1;
-    --text-muted:      #8E8F90;
+    --text-primary:        #FFFFFF;
+    --text-secondary:      #D0D1D1;
+    --text-muted:          #A2A2A5;
 
-    --border-subtle:   #333333;
-    --border-strong:   #4A4A4A;
+    --border-subtle:       #38383B;
+    --border-strong:       #4A4A4A;
 
-    --accent-primary:  #FFFFFF;
-    --accent-hover:    #D0D1D1;
-    --accent-subtle:   #333333;
-    --accent-contrast: #000000;
+    --accent-primary:      #80648F;
+    --accent-hover:        #9B7EAA;
+    --accent-subtle:       rgba(128, 100, 143, 0.15);
+    --accent-contrast:     #FFFFFF;
 
-    --focus-ring:      #FFFFFF;
+    --accent-violet:       #80648F;
+    --accent-rust:         #A6533A;
+    --accent-sage:         #477563;
+    --accent-ochre:        #A98025;
+
+    --focus-ring:          #80648F;
 }
 
 @theme {
@@ -95,6 +114,7 @@ html.dark {
     --color-bg-secondary:   var(--bg-secondary);
     --color-bg-card:        var(--bg-card);
     --color-bg-elevated:    var(--bg-elevated);
+    --color-bg-services:    var(--bg-services);
 
     --color-text-primary:   var(--text-primary);
     --color-text-secondary: var(--text-secondary);
@@ -107,6 +127,11 @@ html.dark {
     --color-accent-hover:    var(--accent-hover);
     --color-accent-subtle:   var(--accent-subtle);
     --color-accent-contrast: var(--accent-contrast);
+
+    --color-accent-violet:   var(--accent-violet);
+    --color-accent-rust:     var(--accent-rust);
+    --color-accent-sage:     var(--accent-sage);
+    --color-accent-ochre:    var(--accent-ochre);
 
     /* Compatibility aliases for previous component classes */
     --color-navy:        var(--bg-primary);
@@ -187,6 +212,7 @@ html.dark {
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 4.5rem;
     background-color: var(--bg-primary);
 }
 

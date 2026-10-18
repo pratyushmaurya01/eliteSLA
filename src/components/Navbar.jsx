@@ -28,10 +28,10 @@ export default function Navbar({ dark, toggleTheme }) {
     return (
         <header
             className={[
-                'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
+                'fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-border-subtle',
                 scrolled
-                    ? 'bg-bg-primary/95 backdrop-blur-md shadow-sm border-b border-border-subtle'
-                    : 'bg-transparent',
+                    ? 'bg-bg-primary/95 backdrop-blur-md shadow-sm'
+                    : 'bg-bg-primary/80 backdrop-blur-sm',
             ].join(' ')}
         >
             <div className="max-w-site mx-auto px-6 md:px-10 h-16 md:h-18 flex items-center justify-between gap-6">

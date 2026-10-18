@@ -11,6 +11,7 @@ const tokens = {
         'bg-secondary':   'var(--bg-secondary)',
         'bg-card':        'var(--bg-card)',
         'bg-elevated':    'var(--bg-elevated)',
+        'bg-services':    'var(--bg-services)',
 
         'text-primary':   'var(--text-primary)',
         'text-secondary': 'var(--text-secondary)',
@@ -23,6 +24,11 @@ const tokens = {
         'accent-hover':   'var(--accent-hover)',
         'accent-subtle':  'var(--accent-subtle)',
         'accent-contrast':'var(--accent-contrast)',
+
+        'accent-violet':  'var(--accent-violet)',
+        'accent-rust':    'var(--accent-rust)',
+        'accent-sage':    'var(--accent-sage)',
+        'accent-ochre':   'var(--accent-ochre)',
 
         // Backwards compatibility mappings for existing utility classes
         navy:             'var(--bg-primary)',
